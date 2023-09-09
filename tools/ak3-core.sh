@@ -227,7 +227,7 @@ repack_ramdisk() {
     fi;
   fi;
   if [ "$packfail" ]; then
-    abort "Repacking ramdisk failed. Aborting...";
+    echo "Repacking ramdisk failed.";
   fi;
 
   if [ -f "$bin/mkmtkhdr" -a -f "$split_img/boot.img-base" ]; then
