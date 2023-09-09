@@ -174,7 +174,7 @@ unpack_ramdisk() {
   cd $ramdisk;
   EXTRACT_UNSAFE_SYMLINKS=1 cpio -d -F $split_img/ramdisk.cpio -i;
   if [ $? != 0 -o ! "$(ls)" ]; then
-    abort "Unpacking ramdisk failed. Aborting...";
+    echo "Unpacking ramdisk failed.";
   fi;
   if [ -d "$home/rdtmp" ]; then
     cp -af $home/rdtmp/* .;
