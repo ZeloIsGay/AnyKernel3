@@ -9,9 +9,18 @@ do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
-do.cleanuponabort=0
-device.name1=sweet
-device.name2=sweetin
+do.cleanuponabort=1
+device.name1=haydn
+device.name2=haydn_in
+device.name3=MI 11x Pro
+device.name4=Redmi K40 Pro
+device.name5=Xiaomi 11x Pro
+device.name6=Redmi K40 Pro+
+device.name7=MI 11i
+device.name8=K40 Pro
+device.name9=K40 Pro+
+device.name10=milahaina
+device.name11=haydnin
 supported.versions=
 supported.patchlevels=
 supported.vendorpatchlevels=
@@ -26,10 +35,11 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 } # end attributes
 
 # boot shell variables
-block=auto;
-is_slot_device=auto;
+block=boot;
+is_slot_device=1;
 ramdisk_compression=auto;
-patch_vbmeta_flag=auto;
+patch_vbmeta_flag=0;
+no_block_display=1;
 
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh;
